@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics.Metrics;
 
@@ -6,8 +6,6 @@ namespace ParallelJobScheduler
 {
     public class ModelService 
     {
-        private int count = 0;
-
         public ModelService()
         {
 
@@ -17,7 +15,9 @@ namespace ParallelJobScheduler
         {
             try
             {
-                while (count <= 5000)
+                int count = 0;
+
+                while (count < 5)
                 {
                     cancellationToken.ThrowIfCancellationRequested();
 
@@ -39,3 +39,4 @@ namespace ParallelJobScheduler
         }
     }
 }
+
