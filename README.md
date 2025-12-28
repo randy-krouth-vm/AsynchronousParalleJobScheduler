@@ -85,5 +85,7 @@ Hot jobs preempt cold jobs via cooperative cancellation and re-queueing.
 - ✅ No task explosion
 - ✅ Suitable for Web APIs and background services
 
+<br>
 
+<img width="1406" height="639" alt="image" src="https://github.com/user-attachments/assets/cfdb1413-3028-43b5-882c-498af170f1ee" />
 
