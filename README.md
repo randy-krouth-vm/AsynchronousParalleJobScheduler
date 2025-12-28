@@ -10,7 +10,7 @@ It supports:
 - **Cooperative cancellation**
 - **Cold job re-queuing on preemption**
 
-When a **hot job** arrives, currently running **cold jobs** are cooperatively cancelled and re-queued, allowing hot jobs to execute immediately without permanently starving long-running work.
+When a **hot job** arrives, currently running **cold jobs** are cooperatively cancelled and re-queued, allowing hot jobs to execute immediately.
 
 This scheduler is designed for systems where **latency-sensitive operations must run immediately**, while background tasks can pause and resume safely.
 
