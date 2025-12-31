@@ -40,7 +40,7 @@ namespace ParallelJobScheduler
                 {
                     lock (_lock)
                     {
-                        if (activeColdJobs.Count >= 1)
+                        if (activeColdJobs.Count >= 1 && (activeColdJobs.Count + hotQueue.Count + 1) > maxTaskCount)
                         {
                             Job coldJob = activeColdJobs[^1];
                             activeColdJobs.Remove(coldJob);
@@ -192,4 +192,5 @@ namespace ParallelJobScheduler
     }
 
 }
+
 
